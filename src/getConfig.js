@@ -18,7 +18,7 @@ if (process && process.env){
  * Generates a config for Karma.
  * @param {Config} options
  */
-function getConfig({files = 'src/**/*.spec.ts', webpack} = {}){
+function getConfig({files = 'src/**/*.spec.js', webpack} = {}){
 	//region Base config
 	const patterns = Array.isArray(files) ? files : [files];
 	const config = {
