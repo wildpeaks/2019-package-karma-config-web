@@ -38,7 +38,7 @@ describe('Fixtures', () => {
 		const config = getKarmaConfig({
 			files: 'test/fixtures/basic/*.spec.js'
 		});
-		const actual = await runKarma(config);
+		const actual = await runKarma(config, true);
 		expect(actual).toEqual({passed: 2, failed: 1});
 	}, 60000);
 
