@@ -38,50 +38,50 @@ describe('Fixtures', () => {
 		const config = getKarmaConfig({
 			files: 'test/fixtures/basic/*.spec.js'
 		});
-		const actual = await runKarma(config, true);
+		const actual = await runKarma(config);
+		expect(actual).toEqual({passed: 2, failed: 1});
+	}, 30000);
+
+	it('Webpack', async() => {
+		const config = getKarmaConfig({
+			files: 'test/fixtures/basic/*.spec.js',
+			webpack: {
+				mode: 'development'
+			}
+		});
+		const actual = await runKarma(config);
 		expect(actual).toEqual({passed: 2, failed: 1});
 	}, 60000);
 
-	// it('Webpack', async() => {
-	// 	const config = getKarmaConfig({
-	// 		files: 'test/fixtures/basic/*.spec.js',
-	// 		webpack: {
-	// 			mode: 'development'
-	// 		}
-	// 	});
-	// 	const actual = await runKarma(config);
-	// 	expect(actual).toEqual({passed: 2, failed: 1});
-	// }, 60000);
+	it('Custom Loader', async() => {
+		const config = getKarmaConfig({
+			files: 'test/fixtures/loaders/*.spec.js',
+			webpack: {
+				mode: 'development',
+				module: {
+					rules: [
+						{
+							test: /\.example$/,
+							use: join(__dirname, 'fixtures/loaders/example.loader.js')
+						}
+					]
+				}
+			}
+		});
+		const actual = await runKarma(config);
+		expect(actual).toEqual({passed: 2, failed: 0});
+	}, 60000);
 
-	// it('Custom Loader', async() => {
-	// 	const config = getKarmaConfig({
-	// 		files: 'test/fixtures/loaders/*.spec.js',
-	// 		webpack: {
-	// 			mode: 'development',
-	// 			module: {
-	// 				rules: [
-	// 					{
-	// 						test: /\.example$/,
-	// 						use: join(__dirname, 'fixtures/loaders/example.loader.js')
-	// 					}
-	// 				]
-	// 			}
-	// 		}
-	// 	});
-	// 	const actual = await runKarma(config);
-	// 	expect(actual).toEqual({passed: 2, failed: 0});
-	// }, 60000);
-
-	// it('Shared Config', async() => {
-	// 	const config = getKarmaConfig({
-	// 		files: 'test/fixtures/shared/*.spec.ts',
-	// 		webpack: getWebpackConfig({
-	// 			minify: false,
-	// 			skipPostprocess: true,
-	// 			rootFolder: join(__dirname, 'test/fixtures')
-	// 		})
-	// 	});
-	// 	const actual = await runKarma(config);
-	// 	expect(actual).toEqual({passed: 2, failed: 0});
-	// }, 60000);
+	it('Shared Config', async() => {
+		const config = getKarmaConfig({
+			files: 'test/fixtures/shared/*.spec.ts',
+			webpack: getWebpackConfig({
+				minify: false,
+				skipPostprocess: true,
+				rootFolder: join(__dirname, 'test/fixtures')
+			})
+		});
+		const actual = await runKarma(config);
+		expect(actual).toEqual({passed: 2, failed: 0});
+	}, 60000);
 });
