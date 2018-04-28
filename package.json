@@ -17,8 +17,9 @@
   "repository": "https://github.com/wildpeaks/package-karma-config-web",
   "keywords": [
     "wildpeaks",
-    "webpack",
-    "config"
+    "karma",
+    "config",
+    "webpack"
   ],
   "bugs": {
     "url": "https://github.com/wildpeaks/package-karma-config-web/issues"
