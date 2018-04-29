@@ -76,9 +76,9 @@ describe('Fixtures', () => {
 		const config = getKarmaConfig({
 			files: 'test/fixtures/shared/*.spec.ts',
 			webpack: getWebpackConfig({
-				minify: false,
-				skipPostprocess: true,
-				rootFolder: join(__dirname, 'test/fixtures')
+				mode: 'development',
+				rootFolder: join(__dirname, 'test/fixtures'),
+				skipPostprocess: true
 			})
 		});
 		const actual = await runKarma(config);
