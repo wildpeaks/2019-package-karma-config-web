@@ -34,6 +34,12 @@ function runKarma(config, verbose = false){
 
 
 describe('Fixtures', () => {
+	it('No parameters', async() => {
+		const config = getKarmaConfig();
+		const actual = await runKarma(config);
+		expect(actual).toEqual({passed: 0, failed: 0});
+	}, 30000);
+
 	it('Vanilla', async() => {
 		const config = getKarmaConfig({
 			files: 'test/fixtures/basic/*.spec.js'
