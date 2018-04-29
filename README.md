@@ -9,7 +9,7 @@
 
 ## Quickstart
 
-The `pattern` option specifies the test files to run:
+The `files` option specifies the test files to run:
 
 ````js
 // karma.conf.js:
@@ -17,7 +17,7 @@ const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.js'
+		files: 'src/**/*.spec.js'
 	});
 	config.set(karmaConfig);
 };
@@ -31,7 +31,7 @@ const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: [
+		files: [
 			'test/*.test.js',
 			'src/**/*.spec.js'
 		]
@@ -48,7 +48,7 @@ const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.js',
+		files: 'src/**/*.spec.js',
 		webpack: {
 			module: {
 				rules: [
@@ -76,7 +76,7 @@ module.exports = function(config) {
 		skipPostprocess: true
 	});
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.ts',
+		files: 'src/**/*.spec.ts',
 		webpack: webpackConfig
 	});
 	config.set(karmaConfig);
@@ -118,7 +118,7 @@ const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.ts'
+		files: 'src/**/*.spec.ts'
 	});
 	karmaConfig.browsers = ['ChromeHeadless', 'Firefox', 'IE', 'Edge'];
 	config.set(karmaConfig);

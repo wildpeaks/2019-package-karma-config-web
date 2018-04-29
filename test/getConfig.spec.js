@@ -19,7 +19,7 @@ function runKarma(config, verbose = false){
 			config.reporters = [];
 			config.logLevel = 'OFF';
 		}
-		const server = new Server(config, _exitCode => {
+		const server = new Server(config, () => {
 			resolve(fixtureResults);
 		});
 		server.on('run_complete', (_browsers, results) => {
