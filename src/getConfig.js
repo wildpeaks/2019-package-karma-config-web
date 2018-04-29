@@ -48,6 +48,9 @@ function getConfig({files = 'src/**/*.spec.js', webpack} = {}){
 		config.webpackMiddleware = {
 			logLevel: 'silent'
 		};
+		if (typeof webpackCopy.mode === 'undefined'){
+			webpackCopy.mode = 'development';
+		}
 
 		const preprocessors = {};
 		for (const pattern of patterns){
