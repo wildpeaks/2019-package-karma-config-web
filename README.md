@@ -114,11 +114,15 @@ Add additional launchers in the dependencies of your `package.json`, example:
 Then use property `browsers` in ` karma.conf.js`:
 
 ````js
-const karmaConfig = getKarmaConfig({
-	pattern: 'src/**/*.spec.js'
-});
-karmaConfig.browsers = ['ChromeHeadless', 'Firefox', 'IE', 'Edge'];
-karmaConfig.set(karmaConfig);
+const getKarmaConfig = require('@wildpeaks/karma-config-web');
+
+module.exports = function(config) {
+	const karmaConfig = getKarmaConfig({
+		pattern: 'src/**/*.spec.ts'
+	});
+	karmaConfig.browsers = ['ChromeHeadless', 'Firefox', 'IE', 'Edge'];
+	config.set(karmaConfig);
+};
 ````
 
 -------------------------------------------------------------------------------
