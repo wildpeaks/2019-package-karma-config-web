@@ -9,29 +9,27 @@
 
 ## Quickstart
 
-The `pattern` option specifies the test files to run:
-
+The `files` option specifies the test files to run:
 ````js
 // karma.conf.js:
 const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.js'
+		files: 'src/**/*.spec.js'
 	});
 	config.set(karmaConfig);
 };
 ````
 
 You can also use several patterns:
-
 ````js
 // karma.conf.js:
 const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: [
+		files: [
 			'test/*.test.js',
 			'src/**/*.spec.js'
 		]
@@ -41,14 +39,13 @@ module.exports = function(config) {
 ````
 
 Use a [Webpack 4 configuration](https://webpack.js.org/configuration/) to handle more filetypes:
-
 ````js
 // karma.conf.js:
 const getKarmaConfig = require('@wildpeaks/karma-config-web');
 
 module.exports = function(config) {
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.js',
+		files: 'src/**/*.spec.js',
 		webpack: {
 			module: {
 				rules: [
@@ -64,7 +61,6 @@ module.exports = function(config) {
 
 The [Webpack Config Generator](https://www.npmjs.com/package/@wildpeaks/webpack-config-web) makes it easy
 to support **Typescript, CSS, and images**:
-
 ````js
 // karma.conf.js
 const getKarmaConfig = require('@wildpeaks/karma-config-web');
@@ -76,7 +72,7 @@ module.exports = function(config) {
 		skipPostprocess: true
 	});
 	const karmaConfig = getKarmaConfig({
-		pattern: 'src/**/*.spec.ts',
+		files: 'src/**/*.spec.ts',
 		webpack: webpackConfig
 	});
 	config.set(karmaConfig);
@@ -114,11 +110,15 @@ Add additional launchers in the dependencies of your `package.json`, example:
 Then use property `browsers` in ` karma.conf.js`:
 
 ````js
-const karmaConfig = getKarmaConfig({
-	pattern: 'src/**/*.spec.js'
-});
-karmaConfig.browsers = ['ChromeHeadless', 'Firefox', 'IE', 'Edge'];
-karmaConfig.set(karmaConfig);
+const getKarmaConfig = require('@wildpeaks/karma-config-web');
+
+module.exports = function(config) {
+	const karmaConfig = getKarmaConfig({
+		files: 'src/**/*.spec.ts'
+	});
+	karmaConfig.browsers = ['ChromeHeadless', 'Firefox', 'IE', 'Edge'];
+	config.set(karmaConfig);
+};
 ````
 
 -------------------------------------------------------------------------------
