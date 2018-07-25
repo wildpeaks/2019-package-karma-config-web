@@ -38,8 +38,8 @@
     "@types/node": "10.5.3",
     "@types/jasmine": "2.8.8",
     "@wildpeaks/eslint-config-commonjs": "5.0.0",
-    "@wildpeaks/webpack-config-web": "1.5.2",
-    "eslint": "5.0.1",
+    "@wildpeaks/webpack-config-web": "1.5.3",
+    "eslint": "5.2.0",
     "jasmine": "3.1.0",
     "typescript": "2.9.2",
     "webpack": "4.16.2"
