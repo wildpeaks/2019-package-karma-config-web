@@ -35,7 +35,7 @@
     "puppeteer": "1.7.0"
   },
   "devDependencies": {
-    "@types/node": "10.9.1",
+    "@types/node": "10.9.2",
     "@types/jasmine": "2.8.8",
     "@wildpeaks/eslint-config-commonjs": "5.1.0",
     "@wildpeaks/webpack-config-web": "1.9.0",
