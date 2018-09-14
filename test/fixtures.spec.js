@@ -2,7 +2,6 @@
 'use strict';
 const {join} = require('path');
 const {Server} = require('karma');
-const getWebpackConfig = require('@wildpeaks/webpack-config-web');
 const getKarmaConfig = require('..');
 
 
@@ -73,19 +72,6 @@ describe('Fixtures', () => {
 					]
 				}
 			}
-		});
-		const actual = await runKarma(config);
-		expect(actual).toEqual({passed: 2, failed: 0});
-	}, 60000);
-
-	it('Shared Config', async() => {
-		const config = getKarmaConfig({
-			files: 'test/fixtures/shared/*.spec.ts',
-			webpack: getWebpackConfig({
-				mode: 'development',
-				rootFolder: join(__dirname, 'test/fixtures'),
-				skipPostprocess: true
-			})
 		});
 		const actual = await runKarma(config);
 		expect(actual).toEqual({passed: 2, failed: 0});
