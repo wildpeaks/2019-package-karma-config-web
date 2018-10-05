@@ -1,6 +1,6 @@
 {
   "name": "@wildpeaks/karma-config-web",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Karma config generator",
   "author": "Cecile Muller",
   "license": "MIT",
@@ -32,16 +32,16 @@
     "karma-jasmine": "1.1.2",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "3.0.5",
-    "puppeteer": "1.8.0"
+    "puppeteer": "1.9.0"
   },
   "devDependencies": {
     "@types/node": "10.11.4",
     "@types/jasmine": "2.8.9",
     "@wildpeaks/eslint-config-commonjs": "5.1.0",
-    "eslint": "5.5.0",
+    "eslint": "5.6.1",
     "jasmine": "3.2.0",
-    "typescript": "3.0.3",
-    "webpack": "4.20.1"
+    "typescript": "3.1.1",
+    "webpack": "4.20.2"
   },
   "peerDependencies": {
     "webpack": "*"
