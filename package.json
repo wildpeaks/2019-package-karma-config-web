@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/wildpeaks/package-karma-config-web#readme",
   "dependencies": {
-    "jasmine-core": "3.2.1",
+    "jasmine-core": "3.3.0",
     "karma": "3.0.0",
     "karma-chrome-launcher": "2.2.0",
     "karma-jasmine": "1.1.2",
