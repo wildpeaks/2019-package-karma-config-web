@@ -35,7 +35,7 @@
     "puppeteer": "1.10.0"
   },
   "devDependencies": {
-    "@types/node": "11.10.0",
+    "@types/node": "11.10.5",
     "@types/jasmine": "2.8.10",
     "@wildpeaks/eslint-config-commonjs": "5.1.0",
     "eslint": "5.15.1",
