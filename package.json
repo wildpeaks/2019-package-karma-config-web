@@ -1,6 +1,6 @@
 {
   "name": "@wildpeaks/karma-config-web",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Karma config generator",
   "author": "Cecile Muller",
   "license": "MIT",
@@ -27,8 +27,8 @@
   "homepage": "https://github.com/wildpeaks/package-karma-config-web#readme",
   "dependencies": {
     "jasmine-core": "3.4.0",
-    "karma": "4.1.0",
-    "karma-chrome-launcher": "2.2.0",
+    "karma": "4.2.0",
+    "karma-chrome-launcher": "3.0.0",
     "karma-jasmine": "2.0.1",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "4.0.2",
