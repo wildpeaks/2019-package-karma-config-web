@@ -39,7 +39,7 @@
     "@types/jasmine": "3.4.0",
     "@wildpeaks/eslint-config-commonjs": "7.0.0",
     "eslint": "6.4.0",
-    "jasmine": "3.4.0",
+    "jasmine": "3.5.0",
     "typescript": "3.6.3",
     "webpack": "4.40.2"
   },
