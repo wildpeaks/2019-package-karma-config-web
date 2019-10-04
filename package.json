@@ -12,7 +12,9 @@
     "src"
   ],
   "scripts": {
-    "test": "jasmine test/*.spec.js"
+    "test": "jasmine test/*.spec.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "https://github.com/wildpeaks/package-karma-config-web",
   "keywords": [
@@ -32,7 +34,8 @@
     "karma-jasmine": "2.0.1",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "4.0.2",
-    "puppeteer": "1.20.0"
+    "puppeteer": "1.20.0",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "@types/node": "12.7.9",
@@ -45,5 +48,6 @@
   },
   "peerDependencies": {
     "webpack": "*"
-  }
+  },
+  "snyk": true
 }
