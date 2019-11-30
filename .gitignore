@@ -17,6 +17,7 @@
 !/.gitattributes
 !/.gitignore
 !/.npmrc
+!/.github
 !/.vscode
 !/azure-pipelines.yml
 !/src
