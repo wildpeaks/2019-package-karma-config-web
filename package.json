@@ -7,6 +7,12 @@
   "eslintConfig": {
     "extends": "@wildpeaks/commonjs"
   },
+  "greenkeeper": {
+    "commitMessages": {
+      "dependencyUpdate": "fix: Update ${dependency}",
+      "devDependencyUpdate": "chore: Update ${dependency}"
+    }
+  },
   "main": "src/getConfig.js",
   "files": [
     "src"
@@ -35,12 +41,13 @@
     "puppeteer": "2.0.0"
   },
   "devDependencies": {
-    "@types/node": "12.12.10",
-    "@types/jasmine": "3.4.6",
+    "@types/node": "12.12.14",
+    "@types/jasmine": "3.5.0",
     "@wildpeaks/eslint-config-commonjs": "7.2.0",
-    "eslint": "6.6.0",
+    "@wildpeaks/tsconfig-web": "1.0.0",
+    "eslint": "6.7.2",
     "jasmine": "3.5.0",
-    "typescript": "3.6.4",
+    "typescript": "3.7.2",
     "webpack": "4.41.2"
   },
   "peerDependencies": {

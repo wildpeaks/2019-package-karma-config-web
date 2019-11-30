@@ -17,7 +17,7 @@
 !/.gitattributes
 !/.gitignore
 !/.npmrc
-!/.travis.yml
+!/.github
 !/.vscode
 !/azure-pipelines.yml
 !/src
