@@ -48,7 +48,7 @@
     "eslint": "6.7.2",
     "jasmine": "3.5.0",
     "typescript": "3.7.3",
-    "webpack": "4.41.2"
+    "webpack": "4.41.3"
   },
   "peerDependencies": {
     "webpack": "*"
