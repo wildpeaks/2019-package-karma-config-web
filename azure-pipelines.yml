@@ -7,7 +7,7 @@ strategy:
       node_version: 13.x
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
 steps:
   - task: NodeTool@0
