@@ -4,6 +4,17 @@
   "description": "Karma config generator",
   "author": "Cecile Muller",
   "license": "MIT",
+  "keywords": [
+    "wildpeaks",
+    "karma",
+    "config",
+    "webpack"
+  ],
+  "homepage": "https://github.com/wildpeaks/package-karma-config-web#readme",
+  "repository": "https://github.com/wildpeaks/package-karma-config-web",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/package-karma-config-web/issues"
+  },
   "eslintConfig": {
     "extends": "@wildpeaks/commonjs"
   },
@@ -20,17 +31,9 @@
   "scripts": {
     "test": "jasmine test/*.spec.js"
   },
-  "repository": "https://github.com/wildpeaks/package-karma-config-web",
-  "keywords": [
-    "wildpeaks",
-    "karma",
-    "config",
-    "webpack"
-  ],
-  "bugs": {
-    "url": "https://github.com/wildpeaks/package-karma-config-web/issues"
+  "peerDependencies": {
+    "webpack": "*"
   },
-  "homepage": "https://github.com/wildpeaks/package-karma-config-web#readme",
   "dependencies": {
     "jasmine-core": "3.5.0",
     "karma": "4.4.1",
@@ -49,8 +52,5 @@
     "jasmine": "3.5.0",
     "typescript": "3.7.3",
     "webpack": "4.41.4"
-  },
-  "peerDependencies": {
-    "webpack": "*"
   }
 }
