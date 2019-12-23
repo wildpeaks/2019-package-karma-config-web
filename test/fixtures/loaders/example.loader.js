@@ -1,7 +1,8 @@
 /* eslint-env node */
-'use strict';
+"use strict";
 
-module.exports = function(source){
+module.exports = function(source) {
 	this.cacheable();
-	return 'module.exports = ' + source.replace(/EXAMPLE/ig, ''); // eslint-disable-line prefer-template
+	// eslint-disable-next-line prefer-template
+	return "module.exports = " + source.replace(/EXAMPLE/gi, "");
 };

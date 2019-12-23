@@ -4,13 +4,30 @@
   "description": "Karma config generator",
   "author": "Cecile Muller",
   "license": "MIT",
+  "keywords": [
+    "wildpeaks",
+    "karma",
+    "config",
+    "webpack"
+  ],
+  "homepage": "https://github.com/wildpeaks/package-karma-config-web#readme",
+  "repository": "https://github.com/wildpeaks/package-karma-config-web",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/package-karma-config-web/issues"
+  },
   "eslintConfig": {
     "extends": "@wildpeaks/commonjs"
   },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": true,
+    "bracketSpacing": false
+  },
   "greenkeeper": {
     "commitMessages": {
-      "dependencyUpdate": "fix: Update ${dependency}",
-      "devDependencyUpdate": "chore: Update ${dependency}"
+      "dependencyUpdate": "feat: update ${dependency}",
+      "devDependencyUpdate": "chore: update ${dependency}"
     }
   },
   "main": "src/getConfig.js",
@@ -20,17 +37,9 @@
   "scripts": {
     "test": "jasmine test/*.spec.js"
   },
-  "repository": "https://github.com/wildpeaks/package-karma-config-web",
-  "keywords": [
-    "wildpeaks",
-    "karma",
-    "config",
-    "webpack"
-  ],
-  "bugs": {
-    "url": "https://github.com/wildpeaks/package-karma-config-web/issues"
+  "peerDependencies": {
+    "webpack": "*"
   },
-  "homepage": "https://github.com/wildpeaks/package-karma-config-web#readme",
   "dependencies": {
     "jasmine-core": "3.5.0",
     "karma": "4.4.1",
@@ -43,14 +52,12 @@
   "devDependencies": {
     "@types/node": "12.12.21",
     "@types/jasmine": "3.5.0",
-    "@wildpeaks/eslint-config-commonjs": "7.3.0",
-    "@wildpeaks/tsconfig-web": "1.1.0",
+    "@wildpeaks/eslint-config-commonjs": "8.0.0-alpha8",
+    "@wildpeaks/tsconfig-web": "2.0.0-alpha2",
     "eslint": "6.8.0",
     "jasmine": "3.5.0",
-    "typescript": "3.7.3",
+    "prettier": "1.19.1",
+    "typescript": "3.7.4",
     "webpack": "4.41.4"
-  },
-  "peerDependencies": {
-    "webpack": "*"
   }
 }
