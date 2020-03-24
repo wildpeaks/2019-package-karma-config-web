@@ -9,7 +9,7 @@ const getKarmaConfig = require("..");
  * @param {Object} config Karma config
  */
 function runKarma(config, verbose = false) {
-	return new Promise(resolve => {
+	return new Promise((resolve) => {
 		let fixtureResults;
 		config.port = 9879;
 		config.singleRun = true;
