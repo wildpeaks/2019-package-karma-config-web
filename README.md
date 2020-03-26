@@ -1,6 +1,6 @@
 # Karma Config: Web
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wildpeaks/package-karma-config-web.svg)](https://greenkeeper.io/)
+
 
 **Generates a Karma configuration** for testing using **Puppeteer**.
 
