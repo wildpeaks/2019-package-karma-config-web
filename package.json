@@ -1,6 +1,6 @@
 {
   "name": "@wildpeaks/karma-config-web",
-  "version": "1.12.1",
+  "version": "1.13.0",
   "description": "Karma config generator",
   "author": "Cecile Muller",
   "license": "MIT",
