@@ -47,7 +47,7 @@
   "devDependencies": {
     "@types/jasmine": "3.5.10",
     "@wildpeaks/eslint-config-commonjs": "10.3.0",
-    "@wildpeaks/tsconfig-web": "2.6.3",
+    "@wildpeaks/tsconfig-web": "2.7.0",
     "eslint": "7.1.0",
     "jasmine": "3.5.0",
     "prettier": "2.0.5",
